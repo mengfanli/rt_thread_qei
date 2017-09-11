@@ -18,7 +18,7 @@
 #include "drv_i2c.h"
 #include "dev_motor.h"
 #include "dev_key.h"
-
+#include "uart1.h"
 #include "blinky.h"
 #include "motor_test.h"
 
@@ -46,6 +46,7 @@ void init_dev(void)
 void init_app(void)
 {
     motor_test_init();
+    uart1_app_init();
 }
 
 int rt_application_init(void)
